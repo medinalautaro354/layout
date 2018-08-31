@@ -1,0 +1,157 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Sans-serif;
+	font-size: 16px;
+	background: #4a465b;
+
+}
+.contenedor {
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+	overflow: hidden;
+
+}
+header {
+	background: #fff;
+
+}
+header nav {
+	width: 100%;
+}
+header nav ul{
+	width: 100%;
+	overflow: hidden;
+	list-style: none;
+
+}
+
+header nav ul li {
+	/*para poner uno al lado del otro hay que poner el overflow en el contenedor en que este esta etiqueta*/
+	float: left;
+
+}
+
+header nav ul li a {
+	/*sacar subrayado de un link*/
+	text-decoration: none;
+	/*cancela el punto de los items*/
+	display: inline-block;
+	/*separar los items*/
+	padding: 15px 20px;
+
+}
+/*para cuando pases el mouse por encima*/
+header nav ul li a:hover{
+	background: #000;
+	color:#fff;
+}
+
+.main {
+	width: 70%;
+	background: #fff;
+	/*para que flote hacia la izquierda*/
+	float: left;
+}
+/*para que la imagen no se salga del contenedor*/
+.main .imagen{
+	width: 100%;
+}
+
+.main .imagen img {
+	width: 100%;
+	/*para eliminar marco entre la imagen y texto*/
+	vertical-align: top;
+}
+
+.main .post {
+	padding: 40px;
+}
+
+.main .post article h2{
+	/*Agregar margen hacia abajo*/
+	margin-bottom: 20px;
+}
+
+.main .post article p {
+	margin-bottom: 15px;
+	/*para agregar espacio entre texto*/
+	line-height: 27px;
+}
+
+aside {
+	width: 30%;
+	background:#161f26;
+	padding: 20px; 
+	color: #fff;
+	float: left;
+}
+
+aside .widget {
+	margin-bottom: 20px;
+
+}
+
+aside .widget .titulo {
+	color: #ff8000;
+	/*para subrayar*/
+	border-bottom: 1px solid #ff8000;
+	margin-bottom: 10px;
+}
+
+aside .widget ul {
+	list-style: none;
+}
+
+aside .widget ul li {
+	/*para poner un borde para separar*/
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+	padding: 10px 0;
+}
+
+aside .widget ul li a {
+	color: #fff;
+	/*sacamos el color azul del link*/
+	text-decoration: none;
+}
+/*para cuando el puntero pase por encima cambie de color*/
+aside .widget ul li a:hover {
+	color: #8f8f8f;
+}
+
+aside .widget p {
+	line-height: 27px;
+}
+
+footer {
+	width: 70%;
+	/*empezar en una nueva linea*/
+	clear: both;
+	background: #000;
+	color: #ffF;
+	padding: 15px 0;
+	text-align: center;
+
+}
+
+/*media querys*//*Cuando este en pantalla y tenga un tamaño maximo de 800%*/
+@media screen and (max-width:800px){
+	.main{
+		width: 100%;
+	}
+
+	aside {
+		width: 100%;
+	}
+
+	footer {
+		width: 100%;
+	}
+}
